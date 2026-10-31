@@ -1,0 +1,30 @@
+09-16 22:57:30.122 D/ImSmartSlide(17678): mIsOptimizeEnable = true
+09-16 22:57:30.123 I/SmartSlideOverScroller(17678): start init SmartSlideOverScroller and get the overscroller config
+09-16 22:57:30.124 I/SmartSlideOverScrollerConfig(17678): get the overscroller config
+09-16 22:57:30.125 D/ImSmartSlide(17678): mIsOptimizeEnable = true
+09-16 22:57:30.220 D/EventBus(17678): No subscribers registered for event class com.github.tvbox.osc.event.ServerEvent
+09-16 22:57:30.220 D/EventBus(17678): No subscribers registered for event class org.greenrobot.eventbus.NoSubscriberEvent
+09-16 22:57:30.615 I/PyLoader(17678): normal flavor: clear() 调用，但不支持 Python 功能。
+09-16 22:57:30.620 I/System.out(17678): 从本地缓存加载/data/user/0/com.github.tvbox.osc.tk/files/15ad925aca3e7a84f7d88a0a4513f3a6
+09-16 22:57:30.794 I/System.out(17678): Live URL :https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
+09-16 22:57:30.891 I/ub.tvbox.osc.t(17678): The ClassLoaderContext is a special shared library.
+09-16 22:57:34.694 I/system_server( 2032): libdebuggerd_client: started dumping process 17678
+09-16 22:57:34.696 I//system/bin/tombstoned( 1931): registered intercept for pid 17678 and type kDebuggerdJavaBacktrace
+09-16 22:57:34.696 I/ub.tvbox.osc.t(17678): Thread[3,tid=17684,WaitingInMainSignalCatcherLoop,Thread*=0xa4b39200,peer=0x12e40b28,"Signal Catcher"]: reacting to signal 3
+09-16 22:57:34.697 I/ub.tvbox.osc.t(17678): 
+09-16 22:57:34.872 I//system/bin/tombstoned( 1931): received crash request for pid 17678
+09-16 22:57:34.872 I//system/bin/tombstoned( 1931): found intercept fd 512 for pid 17678 and type kDebuggerdJavaBacktrace
+09-16 22:57:34.873 I/ub.tvbox.osc.t(17678): Wrote stack traces to '[tombstoned]'
+09-16 22:57:34.874 I/system_server( 2032): libdebuggerd_client: done dumping process 17678
+09-16 22:57:40.410 I/ub.tvbox.osc.t(17678): The ClassLoaderContext is a special shared library.
+09-16 22:57:40.540 W/ub.tvbox.osc.t(17678): Accessing hidden method Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread; (light greylist, reflection)
+09-16 22:57:40.540 W/ub.tvbox.osc.t(17678): Accessing hidden field Landroid/app/ActivityThread;->mActivities:Landroid/util/ArrayMap; (light greylist, reflection)
+09-16 22:57:40.679 E/ActivityManager( 2032): PID: 17678
+09-16 22:57:40.679 E/ActivityManager( 2032):   64% 17678/com.github.tvbox.osc.tk: 63% user + 1.5% kernel / faults: 1940 minor 7 major
+09-16 22:57:40.699 I/ActivityManager( 2032): Killing 17678:com.github.tvbox.osc.tk/u0a26 (adj 0): user request after error
+09-16 22:57:40.703 I/ActivityManager( 2032): App already killed by AM skipping ANR: ProcessRecord{29f7aae 17678:com.github.tvbox.osc.tk/u0a26} Input dispatching timed out (Waiting because no window has focus but there is a focused application that may eventually add a window when it finishes starting up.)
+09-16 22:57:40.703 W/libprocessgroup( 2032): kill(-17678, 9) failed: No such process
+09-16 22:57:40.748 W/libprocessgroup( 2032): kill(-17678, 9) failed: No such process
+09-16 22:57:40.774 I/Zygote  ( 1700): Process 17678 exited due to signal (9)
+09-16 22:57:40.793 W/libprocessgroup( 2032): kill(-17678, 9) failed: No such process
+09-16 22:57:40.793 I/libprocessgroup( 2032): Successfully killed process cgroup uid 10026 pid 17678 in 90ms

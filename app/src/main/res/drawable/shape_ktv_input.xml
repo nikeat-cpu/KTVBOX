@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- KTV 主界面搜索框：深青底 + 暗青描边 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/vs_14" />
+    <stroke android:width="@dimen/vs_1" android:color="#4D26C6DA" />
+    <solid android:color="#66172429" />
+</shape>

@@ -1,0 +1,313 @@
+--------- beginning of main
+09-16 22:35:05.184  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:05.185  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 10 lines
+09-16 22:35:05.185  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:05.273  2032  2142 E WifiVendorHal: getWifiLinkLayerStats(l.937) failed {.code = ERROR_NOT_AVAILABLE, .description = }
+09-16 22:35:05.273  2032  2142 E         : Unknown name for ifindex 0 with more than 518364 bytes of traffic
+09-16 22:35:05.275  2032  2142 E         : Unknown name for ifindex 0 with more than 518364 bytes of traffic
+09-16 22:35:05.472     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [57]
+09-16 22:35:05.473     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:05.476     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [54]
+09-16 22:35:05.488     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [57]
+09-16 22:35:05.489     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc3]: [54]
+09-16 22:35:05.501     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc3]: [57]
+09-16 22:35:05.503     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:05.509  1699 16834 W DnsTlsSocket: SSL_connect error 5, errno=111
+--------- beginning of system
+09-16 22:35:05.525  1927  1968 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+09-16 22:35:05.534     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:05.564  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:05.566  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 10 lines
+09-16 22:35:05.566  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:05.595  2032  2141 E         : Unknown name for ifindex 0 with more than 524741 bytes of traffic
+09-16 22:35:05.595  2032  2141 E         : Unknown name for ifindex 0 with more than 524741 bytes of traffic
+09-16 22:35:05.742  2032  6013 I ActivityManager: START u0 {flg=0x10000000 cmp=com.github.tvbox.osc.tk/com.github.tvbox.osc.ktv.KtvActivity} from uid 2000
+09-16 22:35:05.820     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.prev.class]: [com.github.tvbox.osc.ktv.KtvActivity]
+09-16 22:35:05.830  2032  2105 I sky_launcher: forece to directBoot
+09-16 22:35:05.836     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.prev.apk]: [com.github.tvbox.osc.tk]
+09-16 22:35:05.850     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.current.class]: [com.github.tvbox.osc.ktv.KtvActivity]
+09-16 22:35:05.869  3599  3613 I tianci.appstor: Background concurrent copying GC freed 41584(1753KB) AllocSpace objects, 12(624KB) LOS objects, 20% free, 7MB/9MB, paused 1.622ms total 331.246ms
+09-16 22:35:05.870     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.current.apk]: [com.github.tvbox.osc.tk]
+09-16 22:35:05.915     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.prev.class]: [com.github.tvbox.osc.ui.activity.HomeActivity]
+09-16 22:35:05.922  3599  3611 W System  : A resource failed to call close. 
+09-16 22:35:05.927  3599  3611 I chatty  : uid=1000(system) FinalizerDaemon identical 51 lines
+09-16 22:35:05.928  3599  3611 W System  : A resource failed to call close. 
+09-16 22:35:05.935     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.prev.apk]: [com.github.tvbox.osc.tk]
+09-16 22:35:05.946     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.current.class]: [com.github.tvbox.osc.ktv.KtvActivity]
+09-16 22:35:05.956     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.current.apk]: [com.github.tvbox.osc.tk]
+09-16 22:35:05.963  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:05.966  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 10 lines
+09-16 22:35:05.966  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:05.966  2214  2227 I vte.tv.api.imp: Background concurrent copying GC freed 5124(367KB) AllocSpace objects, 12(240KB) LOS objects, 25% free, 1867KB/2MB, paused 579us total 109.450ms
+09-16 22:35:05.969  2032  7896 I WindowManager: Rotate the screen 0 degree
+09-16 22:35:06.028     1     1 E sky_prop: uid[1000] gid[1003] pid[1726] PROPERTY SET [persist.sys.keystone.update]: [true]
+09-16 22:35:06.033  1726  1726 D RenderEngine: keystone==lt:(0, 648), lb:(0, 0), rt:(1152, 648), rb:(1152, 0)
+09-16 22:35:06.045     1     1 E sky_prop: uid[1000] gid[1003] pid[1726] PROPERTY SET [persist.sys.keystone.update]: [false]
+09-16 22:35:06.051  1726  1726 D RenderEngine: keystone==lt:(64, 1024), lb:(100, 31), rt:(1776, 1049), rb:(1799, 108)
+09-16 22:35:06.052  2032  7896 I ActivityManager: saveActivityStateDataRecord:activityPause
+09-16 22:35:06.053  2032  7896 I SkyDataRecord: MAX_CACHE_SIZE [20]
+09-16 22:35:06.053  2032  7896 I SkyDataRecord: dataTmpJsons.size() [11]
+09-16 22:35:06.053  2032  7896 I SkyDataRecord: Add [{ASC=com.tianci.appstore, PKN=com.github.tvbox.osc.tk, BTM=54370643, ACN=com.github.tvbox.osc.ui.activity.HomeActivity, CTM=1789569306053, skyType=activityPause}]
+09-16 22:35:06.059  1615  7220 W HiMW_logic_media_player: [35m[PrintSignalStatus:173] [no signal] there is no video playing, count = 1500.[0m
+09-16 22:35:06.173 17034 17034 D AndroidAutoSize: com.github.tvbox.osc.ktv.KtvActivity implemented by me.jessyan.autosize.internal.CustomAdapt!
+09-16 22:35:06.182 17034 17034 D AndroidAutoSize: The com.github.tvbox.osc.ktv.KtvActivity has been adapted! 
+09-16 22:35:06.182 17034 17034 D AndroidAutoSize: KtvActivity Info: isBaseOnWidth = true, designWidthInDp = 1280.000000, designWidthInSubunits = 1280.000000, targetDensity = 1.500000, targetScaledDensity = 1.500000, targetDensityDpi = 240, targetXdpi = 1.500000, targetScreenWidthDp = 1280, targetScreenHeightDp = 720
+09-16 22:35:06.206 17034 17034 I sky_launcher: forece to directBoot
+09-16 22:35:06.375  2214  2227 I vte.tv.api.imp: Background concurrent copying GC freed 5314(375KB) AllocSpace objects, 11(220KB) LOS objects, 24% free, 1863KB/2MB, paused 714us total 105.920ms
+09-16 22:35:06.376  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:06.379  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 9 lines
+09-16 22:35:06.379  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:06.596  2032  2141 E         : Unknown name for ifindex 0 with more than 528293 bytes of traffic
+09-16 22:35:06.597  2032  2141 E         : Unknown name for ifindex 0 with more than 528293 bytes of traffic
+09-16 22:35:06.654  1699 16875 W DnsTlsSocket: SSL_connect error 5, errno=111
+09-16 22:35:06.713 17034 17034 I SmartSlideOverScroller: start init SmartSlideOverScroller and get the overscroller config
+09-16 22:35:06.714 17034 17034 I SmartSlideOverScrollerConfig: get the overscroller config
+09-16 22:35:06.718 17034 17034 D ImSmartSlide: mIsOptimizeEnable = true
+09-16 22:35:06.719 17034 17034 I SmartSlideOverScroller: start init SmartSlideOverScroller and get the overscroller config
+09-16 22:35:06.719 17034 17034 I SmartSlideOverScrollerConfig: get the overscroller config
+09-16 22:35:06.722 17034 17034 D ImSmartSlide: mIsOptimizeEnable = true
+09-16 22:35:06.722 17034 17034 I SmartSlideOverScroller: start init SmartSlideOverScroller and get the overscroller config
+09-16 22:35:06.723 17034 17034 I SmartSlideOverScrollerConfig: get the overscroller config
+09-16 22:35:06.726 17034 17034 D ImSmartSlide: mIsOptimizeEnable = true
+09-16 22:35:06.801 17034 17045 I ub.tvbox.osc.t: Background concurrent copying GC freed 6128(520KB) AllocSpace objects, 1(16KB) LOS objects, 24% free, 2MB/3MB, paused 308us total 190.460ms
+09-16 22:35:06.802 17034 17034 I SmartSlideOverScroller: start init SmartSlideOverScroller and get the overscroller config
+09-16 22:35:06.803 17034 17034 I SmartSlideOverScrollerConfig: get the overscroller config
+09-16 22:35:06.805 17034 17034 D ImSmartSlide: mIsOptimizeEnable = true
+09-16 22:35:06.806 17034 17034 I SmartSlideOverScroller: start init SmartSlideOverScroller and get the overscroller config
+09-16 22:35:06.806 17034 17034 I SmartSlideOverScrollerConfig: get the overscroller config
+09-16 22:35:06.811 17034 17034 D ImSmartSlide: mIsOptimizeEnable = true
+09-16 22:35:06.812 17034 17034 I SmartSlideOverScroller: start init SmartSlideOverScroller and get the overscroller config
+09-16 22:35:06.812 17034 17034 I SmartSlideOverScrollerConfig: get the overscroller config
+09-16 22:35:06.814 17034 17034 D ImSmartSlide: mIsOptimizeEnable = true
+09-16 22:35:06.822  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:06.823  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 11 lines
+09-16 22:35:06.823  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:06.903 17034 17034 I System.out: API URL :https://9280.kstore.vip/newwex.json
+09-16 22:35:06.913  2032  2041 I system_server: Background concurrent copying GC freed 40635(1576KB) AllocSpace objects, 10(324KB) LOS objects, 19% free, 8MB/10MB, paused 636us total 498.179ms
+09-16 22:35:06.937 17034 17034 D AndroidAutoSize: com.github.tvbox.osc.ktv.KtvActivity implemented by me.jessyan.autosize.internal.CustomAdapt!
+09-16 22:35:06.947 17034 17034 D AndroidAutoSize: The com.github.tvbox.osc.ktv.KtvActivity has been adapted! 
+09-16 22:35:06.947 17034 17034 D AndroidAutoSize: KtvActivity Info: isBaseOnWidth = true, designWidthInDp = 1280.000000, designWidthInSubunits = 1280.000000, targetDensity = 1.500000, targetScaledDensity = 1.500000, targetDensityDpi = 240, targetXdpi = 1.500000, targetScreenWidthDp = 1280, targetScreenHeightDp = 720
+09-16 22:35:07.004  2032  2982 I ActivityOn: com.github.tvbox.osc.tk
+09-16 22:35:07.005     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [sky.current.apk]: [com.github.tvbox.osc.tk]
+09-16 22:35:07.006     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [sky.current.actname]: [com.github.tvbox.osc.ktv.KtvActivity]
+09-16 22:35:07.009     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [sky.act.translucent]: [false]
+09-16 22:35:07.010  2032  2982 D ActivityManager: com.github.tvbox.osc.tk/com.github.tvbox.osc.ktv.KtvActivity isTranslucent --->false
+09-16 22:35:07.010  2032  2982 I ActivityManager: saveActivityStateDataRecord:activityResume
+09-16 22:35:07.011  2032  2982 I SkyDataRecord: MAX_CACHE_SIZE [20]
+09-16 22:35:07.011  2032  2982 I SkyDataRecord: dataTmpJsons.size() [12]
+09-16 22:35:07.011  2032  2982 I SkyDataRecord: Add [{ASC=null, PKN=com.github.tvbox.osc.tk, BTM=54371600, ACN=com.github.tvbox.osc.ktv.KtvActivity, CTM=1789569307011, skyType=activityResume}]
+09-16 22:35:07.017 17034 17034 I Choreographer: Skipped 57 frames!  The application may be doing too much work on its main thread.
+09-16 22:35:07.020  2407  2407 I EventHandler: *****action=sky.action.start.app.msg time=1789569307020
+09-16 22:35:07.020  2407  2407 I EventHandler: action=sky.action.start.app.msg
+09-16 22:35:07.020  2407  2407 D ccSystem: <EventHandler>, start app event
+09-16 22:35:07.021  2407  2407 D ccSystem: <EventHandler>, pkg name : com.github.tvbox.osc.tk
+09-16 22:35:07.021  2407  2407 D ccSystem: <GameSpeedManager>, isSupportGameSpeed:false
+09-16 22:35:07.021  2407  2407 D ccSystem: <HDRSceneUtil>, hdrSceneOperate pkgName:com.github.tvbox.osc.tk  fullscreen:null  isInHDRScene:false
+09-16 22:35:07.021  2407  2407 D ccSystem: <HDRSceneUtil>, isHDRSceneApp:false  pkg name : com.github.tvbox.osc.tk
+09-16 22:35:07.022  2407  2407 W ccSystem: <apEvent>, same pkg, not need mark
+09-16 22:35:07.026  2407  2407 D ccSystem: <MicInsert>, MicInsertBroadcast Package:com.github.tvbox.osc.tk
+09-16 22:35:07.026  2407  2407 D ccSystem: <MicInsert>, MicInsertBroadcast mCurMicState:0
+09-16 22:35:07.026  2407  2407 D ccSystem: <MicInsert>, isStartKaraoke:false
+09-16 22:35:07.026  2407  2407 E PluginConfig: cached ison=false needReGet=false
+09-16 22:35:07.026  2407  2407 E PluginConfig: set ison=false
+09-16 22:35:07.027  2407  2407 I SSV-PluginModual: SKY_CFG_MICROPHONE_SWITCH.setconfig spend:1
+09-16 22:35:07.027  2407  2407 I sysuilogic: syncReleateItemsByKey=SKY_CFG_MICROPHONE_SWITCH mCallSettingRefreshData:true
+09-16 22:35:07.034  2032  2032 V SettingsProvider: Notifying for 0: content://settings/global/DATA_KEY
+09-16 22:35:07.038  2407  2407 I sysuilogic: items=null
+09-16 22:35:07.038  2032  2032 V SettingsProvider: Notifying for 0: content://settings/global/DATA_KEY
+09-16 22:35:07.040  2407 15772 I 2407    : start to send log to background...
+09-16 22:35:07.040  2407  2407 I ccSystem: <upgrade>, onReceive sky.action.start.app.msg
+09-16 22:35:07.059  2709  2709 D HotKeyReceiver: onReceive : action=sky.action.start.app.msg, packageName=com.github.tvbox.osc.tk
+09-16 22:35:07.060  2709  2709 D HotKeyReceiver: onReceive : notify to app info manager
+09-16 22:35:07.060  2709  2709 D HotKeyReceiver: needFilter app:com.github.tvbox.osc.tk
+09-16 22:35:07.062  2709  2709 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1012 android.content.ContextWrapper.sendBroadcast:444 com.coocaa.os.controlcenter.appinfo.broadcast.AppMsgReceiver.onReceive:10 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0:1391 android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA.run:2 
+09-16 22:35:07.064  2709  2709 D CC-PlaySceneStatus: onActivityChanged pkgName=com.github.tvbox.osc.tk,actName=com.github.tvbox.osc.ktv.KtvActivity,hasPendingMsg=false
+09-16 22:35:07.070  2709  2709 I NativeAppUtil: appList 20
+09-16 22:35:07.078  3599  3599 D globalstart:  activiytReceiver  00 pkg:com.github.tvbox.osc.tk className:com.github.tvbox.osc.ktv.KtvActivity
+09-16 22:35:07.078  3599  3599 D globalstart:  activiytReceiver pkg:com.github.tvbox.osc.tk className:com.github.tvbox.osc.ktv.KtvActivity
+09-16 22:35:07.078  3599  3599 D exit    :  sendAppEvent curPkg:com.github.tvbox.osc.tk isAppStoreTop:false
+09-16 22:35:07.081  2032  7896 W BroadcastQueue: Background execution not allowed: receiving Intent { act=sky.action.start.app.msg flg=0x10 (has extras) } to com.coocaa.os.service/com.tianci.push.lib.broadcast.AppReceiver
+09-16 22:35:07.243  2407  2407 I volume  : onTopActChange com.github.tvbox.osc.ktv.KtvActivity 
+09-16 22:35:07.249  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:07.250  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 9 lines
+09-16 22:35:07.251  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:07.377     1     1 E sky_prop: uid[1000] gid[1000] pid[2032] PROPERTY SET [persist.sys.current.focus]: [com.github.tvbox.osc.tk]
+09-16 22:35:07.433  2032  2041 I system_server: NativeAlloc concurrent copying GC freed 4080(225KB) AllocSpace objects, 0(0B) LOS objects, 18% free, 8MB/10MB, paused 291us total 445.976ms
+09-16 22:35:07.544 17034 17034 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+09-16 22:35:07.557 17034 17101 D ProfileInstaller: Installing profile for com.github.tvbox.osc.tk
+09-16 22:35:07.598  2032  2141 E         : Unknown name for ifindex 0 with more than 530103 bytes of traffic
+09-16 22:35:07.599  2032  2141 E         : Unknown name for ifindex 0 with more than 530103 bytes of traffic
+09-16 22:35:07.649     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [43]
+09-16 22:35:07.650     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:07.651     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [81]
+09-16 22:35:07.659     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [43]
+09-16 22:35:07.661     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc1]: [81]
+09-16 22:35:07.665  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:07.667  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 11 lines
+09-16 22:35:07.667  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:07.671     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc1]: [43]
+09-16 22:35:07.673     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:07.674  2032  2063 I ActivityManager: Displayed com.github.tvbox.osc.tk/com.github.tvbox.osc.ktv.KtvActivity: +1s758ms
+09-16 22:35:07.686     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:07.800  1726  1746 W SurfaceFlinger: Attempting to set client state on removed layer: Splash Screen com.github.tvbox.osc.tk#0
+09-16 22:35:07.800  1726  1746 W SurfaceFlinger: Attempting to destroy on removed layer: Splash Screen com.github.tvbox.osc.tk#0
+09-16 22:35:07.826  2309  2309 E HiRMS_TestSuiteListener: Listener.notify: what=1 msg=com.github.tvbox.osc.tk
+09-16 22:35:07.826  2309  2309 I HiMW_TVClient: [36m[invoke:53] =============invoke cmd = 0x7002=======begin=============[0m
+09-16 22:35:07.841  2309  2309 I HiMW_TVClient: [36m[invoke:65] =============invoke cmd = 0x7002=======end===============[0m
+09-16 22:35:07.843  2309  2309 I HiMW_SourceManagerImpl: [36m[getCurSourceId:227] mainWindow:0, SourceId:13[0m
+09-16 22:35:07.843  2309  2309 I HiMW_TVClient: [36m[invoke:53] =============invoke cmd = 0x700a=======begin=============[0m
+09-16 22:35:07.854  1615  9204 E HiMW_logic_tv_player: [31m[getTimming:655] getStreamVideoInfo fail, ret:0xffffffff[0m
+09-16 22:35:07.854  1615  9204 I HiMW_logic_source_module: [36m[GetTimmingInfo:195] width:0, height:0, u32FrameRate:0, bInterlace:0, enFormatHDMI:0, enFormat3d:0, enColorSpace:0, bMHL:0, ret:-1[0m
+09-16 22:35:07.854  2309  2309 I HiMW_TVClient: [36m[invoke:65] =============invoke cmd = 0x700a=======end===============[0m
+09-16 22:35:07.856  2309  2309 E HiMW_SourceManagerImpl: [31m[getTimingInfo:316] invoke execute fail, ret:-1[0m
+09-16 22:35:07.867  2309  2677 W HiRMS_RamController: Ignore this reclaim: ramStatusLevel = 3 isLauncher = false
+09-16 22:35:07.991  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:07.992  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 8 lines
+09-16 22:35:07.992  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:08.253 17034 17073 W ub.tvbox.osc.t: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (light greylist, reflection)
+09-16 22:35:08.280  2032  2142 E WifiVendorHal: getWifiLinkLayerStats(l.937) failed {.code = ERROR_NOT_AVAILABLE, .description = }
+09-16 22:35:08.280  2032  2142 E         : Unknown name for ifindex 0 with more than 542697 bytes of traffic
+09-16 22:35:08.281  2032  2142 E         : Unknown name for ifindex 0 with more than 542697 bytes of traffic
+09-16 22:35:08.283  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:08.570  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 20 lines
+09-16 22:35:08.570  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:08.600  2032  2141 E         : Unknown name for ifindex 0 with more than 543466 bytes of traffic
+09-16 22:35:08.600  2032  2141 E         : Unknown name for ifindex 0 with more than 543466 bytes of traffic
+09-16 22:35:08.787     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [40]
+09-16 22:35:08.788     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:08.789     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [88]
+09-16 22:35:08.795     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [40]
+09-16 22:35:08.796     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc2]: [88]
+09-16 22:35:08.801     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc2]: [40]
+09-16 22:35:08.802     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:08.810     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:08.854  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:09.142  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 18 lines
+09-16 22:35:09.142  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:09.355  3599  3613 I tianci.appstor: Background concurrent copying GC freed 62458(2MB) AllocSpace objects, 1(20KB) LOS objects, 19% free, 8MB/10MB, paused 359us total 173.519ms
+09-16 22:35:09.377  3599  3611 W System  : A resource failed to call close. 
+09-16 22:35:09.378  3599  3611 I chatty  : uid=1000(system) FinalizerDaemon identical 10 lines
+09-16 22:35:09.378  3599  3611 W System  : A resource failed to call close. 
+09-16 22:35:09.437  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:09.438  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 8 lines
+09-16 22:35:09.438  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:09.601  2032  2141 E         : Unknown name for ifindex 0 with more than 587303 bytes of traffic
+09-16 22:35:09.601  2032  2141 E         : Unknown name for ifindex 0 with more than 587303 bytes of traffic
+09-16 22:35:09.649 17034 17034 I System.out: Live URL :https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
+09-16 22:35:09.729  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:09.730  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 6 lines
+09-16 22:35:09.730  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:09.911     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [57]
+09-16 22:35:09.912     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:09.913     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [54]
+09-16 22:35:09.918     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [57]
+09-16 22:35:09.919     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc3]: [54]
+09-16 22:35:09.924     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc3]: [57]
+09-16 22:35:09.925     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:09.933     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:10.026  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:10.598  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 30 lines
+09-16 22:35:10.598  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:10.602  2032  2141 E         : Unknown name for ifindex 0 with more than 588237 bytes of traffic
+09-16 22:35:10.602  2032  2141 E         : Unknown name for ifindex 0 with more than 588237 bytes of traffic
+09-16 22:35:10.887  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:11.169  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 18 lines
+09-16 22:35:11.169  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:11.286  2032  2142 E WifiVendorHal: getWifiLinkLayerStats(l.937) failed {.code = ERROR_NOT_AVAILABLE, .description = }
+09-16 22:35:11.286  2032  2142 E         : Unknown name for ifindex 0 with more than 665522 bytes of traffic
+09-16 22:35:11.287  2032  2142 E         : Unknown name for ifindex 0 with more than 665522 bytes of traffic
+09-16 22:35:11.454  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:11.454  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 8 lines
+09-16 22:35:11.454  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:11.546  6756  6882 E sfCast  : ApplicationState: MIRTH dlna multicast Monitor Exception, try again later.. Poll timed out
+09-16 22:35:11.603  2032  2141 E         : Unknown name for ifindex 0 with more than 759315 bytes of traffic
+09-16 22:35:11.604  2032  2141 E         : Unknown name for ifindex 0 with more than 759315 bytes of traffic
+09-16 22:35:11.738  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.025  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 16 lines
+09-16 22:35:12.025  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.034     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [43]
+09-16 22:35:12.035     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:12.035     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [81]
+09-16 22:35:12.043     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [43]
+09-16 22:35:12.044     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc1]: [81]
+09-16 22:35:12.053     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc1]: [43]
+09-16 22:35:12.054     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:12.062     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:12.322  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.323  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 10 lines
+09-16 22:35:12.323  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.605  2032  2141 E         : Unknown name for ifindex 0 with more than 1534040 bytes of traffic
+09-16 22:35:12.606  2032  2141 E         : Unknown name for ifindex 0 with more than 1534040 bytes of traffic
+09-16 22:35:12.608  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.609  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 8 lines
+09-16 22:35:12.609  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.627  1699 16833 W DnsTlsSocket: SSL_connect error 5, errno=111
+09-16 22:35:12.785 17106 17106 W dex2oat : Using default instruction set features for ARM CPU variant (cortex-a9) using conservative defaults
+09-16 22:35:12.786 17106 17106 I dex2oat : The ClassLoaderContext is a special shared library.
+09-16 22:35:12.787 17106 17106 I dex2oat : /system/bin/dex2oat --debuggable --debuggable --generate-mini-debug-info --dex-file=/data/user/0/com.github.tvbox.osc.tk/files/csp/16613d5e907ad7926035f420aa0eedef.jar --output-vdex-fd=61 --oat-fd=62 --oat-location=/data/user/0/com.github.tvbox.osc.tk/files/csp/oat/arm/16613d5e907ad7926035f420aa0eedef.odex --compiler-filter=quicken --class-loader-context=&
+09-16 22:35:12.798 17106 17106 W dex2oat : Could not reserve sentinel fault page
+09-16 22:35:12.889  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.889  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 6 lines
+09-16 22:35:12.889  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:12.972 17106 17106 I dex2oat : dex2oat took 192.834ms (186.497ms cpu) (threads: 4) arena alloc=23KB (24040B) java alloc=64KB (65552B) native alloc=575KB (589336B) free=960KB (983528B)
+09-16 22:35:12.984 17034 17034 I ub.tvbox.osc.t: The ClassLoaderContext is a special shared library.
+09-16 22:35:13.164     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [40]
+09-16 22:35:13.164     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:13.165     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [88]
+09-16 22:35:13.171     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [40]
+09-16 22:35:13.172     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc2]: [88]
+09-16 22:35:13.176  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:13.176  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 10 lines
+09-16 22:35:13.176  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:13.178     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc2]: [40]
+09-16 22:35:13.179     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:13.187     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:13.459  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:13.459  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 8 lines
+09-16 22:35:13.459  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:13.606  2032  2141 E         : Unknown name for ifindex 0 with more than 1659420 bytes of traffic
+09-16 22:35:13.606  2032  2141 E         : Unknown name for ifindex 0 with more than 1659420 bytes of traffic
+09-16 22:35:13.743  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:14.025  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 16 lines
+09-16 22:35:14.025  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:14.288     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [57]
+09-16 22:35:14.289     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:14.289     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [54]
+09-16 22:35:14.292  2032  2142 E WifiVendorHal: getWifiLinkLayerStats(l.937) failed {.code = ERROR_NOT_AVAILABLE, .description = }
+09-16 22:35:14.292  2032  2142 E         : Unknown name for ifindex 0 with more than 1659924 bytes of traffic
+09-16 22:35:14.293  2032  2142 E         : Unknown name for ifindex 0 with more than 1659924 bytes of traffic
+09-16 22:35:14.297     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [57]
+09-16 22:35:14.298     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc3]: [54]
+09-16 22:35:14.303     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc3]: [57]
+09-16 22:35:14.304     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:14.312     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:14.322  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:14.603  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 18 lines
+09-16 22:35:14.603  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:14.608  2032  2141 E         : Unknown name for ifindex 0 with more than 1660244 bytes of traffic
+09-16 22:35:14.609  2032  2141 E         : Unknown name for ifindex 0 with more than 1660244 bytes of traffic
+09-16 22:35:14.893  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:15.472  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 30 lines
+09-16 22:35:15.472  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:15.610  2032  2141 E         : Unknown name for ifindex 0 with more than 1660449 bytes of traffic
+09-16 22:35:15.610  2032  2141 E         : Unknown name for ifindex 0 with more than 1660449 bytes of traffic
+09-16 22:35:15.739  2709  3441 I coocaa_push: core.runnable run---mMessagesQueue size=1
+09-16 22:35:15.739  2709  3441 I coocaa_push: core.runnable wait, minDelay == 30000 - v1.0.69_2410251525 - 4000000
+09-16 22:35:15.758  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:16.331  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 27 lines
+09-16 22:35:16.331  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:16.413     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [43]
+09-16 22:35:16.414     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.fandec.disconnect]: [0]
+09-16 22:35:16.415     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc]: [81]
+09-16 22:35:16.421     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.display]: [43]
+09-16 22:35:16.422     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.cvte.lsadc1]: [81]
+09-16 22:35:16.427     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.tempture.ntc1]: [43]
+09-16 22:35:16.428     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [persist.kukai.poweroff]: [0]
+09-16 22:35:16.436     1     1 E sky_prop: uid[0] gid[0] pid[1615] PROPERTY SET [sys.low.tempture]: [0]
+09-16 22:35:16.521  1611  1611 I hwsysmanager@1.: type=1400 audit(0.0:14603): avc: denied { ioctl } for path="/dev/hi_rm" dev="tmpfs" ino=8327 ioctlcmd=0x2c04 scontext=u:r:hal_hwsysmanager:s0 tcontext=u:object_r:hi_rm_device:s0 tclass=chr_file permissive=1
+09-16 22:35:16.612  2032  2141 E         : Unknown name for ifindex 0 with more than 1662232 bytes of traffic
+09-16 22:35:16.612  2032  2141 E         : Unknown name for ifindex 0 with more than 1662232 bytes of traffic
+09-16 22:35:16.621  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:16.621  2214  2225 I chatty  : uid=1000(system) FinalizerDaemon identical 8 lines
+09-16 22:35:16.622  2214  2225 W System  : A resource failed to call close. 
+09-16 22:35:16.788  5875  6720 D sfCast  : DaemonsService: DaemonsService start time : [4:17:0], runtime = 15420， network stata : [true]

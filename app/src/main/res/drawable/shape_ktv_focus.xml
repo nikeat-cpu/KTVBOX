@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- KTV 主界面专用按钮：霓虹 teal 系（与 APP 图标同色系），聚焦时青色描边发光 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="@dimen/vs_14" />
+            <stroke android:width="@dimen/vs_2" android:color="#4DD0E1" />
+            <solid android:color="#3326C6DA" />
+        </shape>
+    </item>
+    <item android:state_focused="false">
+        <shape>
+            <corners android:radius="@dimen/vs_14" />
+            <stroke android:width="@dimen/vs_1" android:color="#2626C6DA" />
+            <solid android:color="#66172429" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>KTVBox点歌台</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#0d1117; color:#e6edf3; padding:14px; padding-bottom:90px; }
+  h1 { font-size:20px; text-align:center; margin:6px 0 14px; color:#ffb340; }
+  .searchbar { display:flex; gap:8px; margin-bottom:14px; }
+  .searchbar input { flex:1; height:44px; border-radius:10px; border:1px solid #30363d; background:#161b22; color:#e6edf3; padding:0 14px; font-size:16px; }
+  .searchbar button { width:74px; height:44px; border-radius:10px; border:none; background:#d29922; color:#0d1117; font-size:16px; font-weight:600; }
+  .tip { color:#8b949e; font-size:13px; margin:8px 2px 14px; }
+  .section-title { font-size:16px; font-weight:600; margin:16px 0 10px; border-left:4px solid #d29922; padding-left:8px; }
+  .song { display:flex; align-items:center; gap:10px; background:#161b22; border:1px solid #21262d; border-radius:12px; padding:10px 12px; margin-bottom:8px; }
+  .song img { width:52px; height:52px; border-radius:8px; object-fit:cover; background:#21262d; flex-shrink:0; }
+  .song .info { flex:1; min-width:0; }
+  .song .name { font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .song .artist { font-size:12px; color:#8b949e; margin-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .song .act { flex-shrink:0; }
+  .btn { border:none; border-radius:8px; padding:8px 14px; font-size:14px; font-weight:600; }
+  .btn-add { background:#238636; color:#fff; }
+  .btn-next { background:#1f6feb; color:#fff; margin-left:6px; }
+  .btn-top { background:#d29922; color:#0d1117; margin-left:6px; padding:8px 10px; }
+  .btn-done { background:#e3b341 !important; color:#0d1117 !important; }
+  .btn-play { background:#d29922; color:#0d1117; }
+  .btn-del { background:#21262d; color:#f85149; margin-left:6px; }
+  .btn:active { opacity:.7; }
+  .cur { border-color:#d29922; }
+  .tag { font-size:11px; color:#0d1117; background:#d29922; border-radius:4px; padding:1px 5px; margin-left:6px; }
+  .empty { text-align:center; color:#8b949e; font-size:14px; padding:24px 0; }
+  .dock { position:fixed; left:0; right:0; bottom:0; background:#161b22ee; border-top:1px solid #30363d; padding:10px 14px; display:flex; gap:8px; backdrop-filter:blur(6px); }
+  .dock button { flex:1; height:42px; border-radius:10px; border:1px solid #30363d; background:#0d1117; color:#e6edf3; font-size:15px; }
+  .spin { text-align:center; color:#8b949e; padding:20px 0; font-size:14px; }
+</style>
+</head>
+<body>
+  <h1>🎤 KTVBox点歌台</h1>
+  <div class="searchbar">
+    <input id="wd" type="search" placeholder="歌名 / 歌手" enterkeyhint="search">
+    <button onclick="doSearch()">搜索</button>
+    <button onclick="clearSearch()" style="width:60px;background:#30363d;color:#8b949e">清空</button>
+  </div>
+  <div class="tip" id="tip">手机与电视需在同一 Wi-Fi；点歌后电视立即开唱，按点歌顺序连播。</div>
+
+  <div id="results"></div>
+
+  <div class="section-title">已点列表 <span id="qcount" style="font-size:13px;color:#8b949e;font-weight:400"></span></div>
+  <div id="queue"><div class="empty">加载中…</div></div>
+
+  <div class="section-title">已播列表 <span id="pcount" style="font-size:13px;color:#8b949e;font-weight:400"></span>
+    <button onclick="clearPlayed()" style="float:right;height:26px;padding:0 10px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#f85149;font-size:12px;">清空已播</button>
+  </div>
+  <div id="played"><div class="empty">还没有唱完的歌</div></div>
+
+  <div class="dock">
+    <button onclick="skipSong()" style="color:#ffa657">⏭ 切歌</button>
+    <button onclick="switchTrack(1)" style="color:#7ee787">原唱</button>
+    <button onclick="switchTrack(2)" style="color:#79c0ff">伴唱</button>
+    <button onclick="refreshQueue()">刷新</button>
+    <button onclick="clearQueue()" style="color:#f85149">清空</button>
+  </div>
+
+<script>
+function $(id){ return document.getElementById(id); }
+function esc(s){ var d=document.createElement('div'); d.textContent=s==null?'':s; return d.innerHTML; }
+function img(p){ return p ? esc(p) : ''; }
+
+function doSearch(tries){
+  var wd = $('wd').value.trim();
+  if(!wd){ $('tip').textContent='请输入歌名或歌手'; return; }
+  if(tries === undefined) tries = 0;
+  if(tries === 0){
+    $('tip').textContent='正在搜索「'+wd+'」…（KTV音乐源，稍等几秒）';
+    $('results').innerHTML='<div class="spin">🔍 搜索中…</div>';
+  }
+  fetch('/ktv/search?wd='+encodeURIComponent(wd))
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.code===2){ /* 电视端后台搜索中，轮询取结果（响应保持毫秒级） */
+        if(tries > 30){ $('results').innerHTML='<div class="empty">搜索超时，请重试</div>'; $('tip').textContent=''; return; }
+        $('tip').textContent='正在搜索「'+wd+'」…';
+        setTimeout(function(){ doSearch(tries+1); }, 2000);
+        return;
+      }
+      var list = d.list || [];
+      if(d.code!==0){ $('results').innerHTML='<div class="empty">'+esc(d.msg||'搜索失败')+'</div>'; $('tip').textContent=''; return; }
+      if(!list.length){ $('results').innerHTML='<div class="empty">没有找到歌曲，换个关键词试试</div>'; $('tip').textContent=''; return; }
+      showResults(list);
+    })
+    .catch(function(e){
+      if(tries > 30){ $('results').innerHTML='<div class="empty">搜索失败：'+esc(e)+'</div>'; return; }
+      setTimeout(function(){ doSearch(tries+1); }, 2000);
+    });
+}
+
+/* 搜索结果分页展示：20 首/页 */
+var _all = [], _page = 0, PAGE_SIZE = 20;
+
+function showResults(list){
+  _all = list; _page = 0;
+  renderResultsPage();
+}
+
+function renderResultsPage(){
+  var total = _all.length, pages = Math.ceil(total/PAGE_SIZE);
+  if(_page >= pages) _page = pages-1;
+  if(_page < 0) _page = 0;
+  var from = _page*PAGE_SIZE, to = Math.min(total, from+PAGE_SIZE);
+  $('tip').textContent = '共 '+total+' 首｜第 '+(_page+1)+'/'+pages+' 页｜点「点歌」加入已点列表';
+  var h = '';
+  if(pages > 1){
+    h += '<div style="display:flex;gap:8px;align-items:center;margin:6px 0">'
+      +'<button onclick="pageMove(-1)" style="flex:1;height:34px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:'+( _page>0?'#e6edf3':'#555')+';font-size:13px;">◀ 上一页</button>'
+      +'<span style="color:#8b949e;font-size:13px;min-width:64px;text-align:center">'+(_page+1)+' / '+pages+'</span>'
+      +'<button onclick="pageMove(1)" style="flex:1;height:34px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:'+( _page<pages-1?'#e6edf3':'#555')+';font-size:13px;">下一页 ▶</button>'
+      +'</div>';
+  }
+  for(var i=from;i<to;i++){
+    var s=_all[i];
+    h+='<div class="song"><img src="'+img(s.pic)+'" onerror="this.style.visibility=\'hidden\'">'
+      +'<div class="info"><div class="name">'+esc(s.name)+'</div><div class="artist">'+esc(s.artist||'未知歌手')+'</div></div>'
+      +'<div class="act"><button class="btn btn-add" onclick="addSong(this,'+quoteArgs(s)+')">点歌</button>'
+      +'<button class="btn btn-next" onclick="addNext(this,'+quoteArgs(s)+')">优先</button></div></div>';
+  }
+  if(pages > 1){
+    h += '<div style="display:flex;gap:8px;align-items:center;margin:6px 0">'
+      +'<button onclick="pageMove(-1)" style="flex:1;height:34px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:'+( _page>0?'#e6edf3':'#555')+';font-size:13px;">◀ 上一页</button>'
+      +'<span style="color:#8b949e;font-size:13px;min-width:64px;text-align:center">'+(_page+1)+' / '+pages+'</span>'
+      +'<button onclick="pageMove(1)" style="flex:1;height:34px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:'+( _page<pages-1?'#e6edf3':'#555')+';font-size:13px;">下一页 ▶</button>'
+      +'</div>';
+  }
+  $('results').innerHTML = h;
+}
+
+function pageMove(d){
+  var pages = Math.ceil(_all.length/PAGE_SIZE);
+  var p = _page + d;
+  if(p < 0 || p >= pages) return;
+  _page = p;
+  renderResultsPage();
+  window.scrollTo(0, 0);
+}
+
+/* 清空当前搜索结果（不影响已点列表） */
+function clearSearch(){
+  _all = []; _page = 0;
+  $('results').innerHTML = '';
+  $('tip').textContent = '搜索已清空';
+  window.scrollTo(0, 0);
+}
+
+function quoteArgs(s){
+  return "'"+encodeURIComponent(s.id||'')+"','"+encodeURIComponent(s.sourceKey||'')+"','"
+    +encodeURIComponent(s.name||'')+"','"+encodeURIComponent(s.artist||'')+"','"+encodeURIComponent(s.pic||'')+"'";
+}
+
+/* 点歌成功反馈：按钮文字变「已点」、底色变黄，不弹窗 */
+function markDone(btn){ if(btn){ btn.textContent='已点'; btn.classList.add('btn-done'); btn.disabled=true; } }
+
+function addSong(btn,id,sourceKey,name,artist,pic){
+  fetch('/ktv/add?id='+id+'&sourceKey='+sourceKey+'&name='+name+'&artist='+artist+'&pic='+pic)
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.code===1){ alert(d.msg||'点歌失败'); return; }
+      markDone(btn);
+      renderQueue(d);
+    })
+    .catch(function(e){ alert('点歌失败：'+e); });
+}
+
+/* 优先点歌：插到当前歌之后，下一首就唱它；已在队列则自动移过去 */
+function addNext(btn,id,sourceKey,name,artist,pic){
+  fetch('/ktv/addNext?id='+id+'&sourceKey='+sourceKey+'&name='+name+'&artist='+artist+'&pic='+pic)
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.code===1){ alert(d.msg||'操作失败'); return; }
+      markDone(btn);
+      $('tip').textContent='⏫ 已优先，这首将在当前歌唱完后立刻开唱';
+      renderQueue(d);
+    })
+    .catch(function(e){ alert('操作失败：'+e); });
+}
+
+/* 已点列表置顶：把这首歌移到当前歌之后（下一首就唱它） */
+function topSong(i){
+  fetch('/ktv/top?index='+i).then(function(r){ return r.json(); }).then(renderQueue);
+}
+
+function playSong(i){
+  fetch('/ktv/play?index='+i).then(function(r){ return r.json(); }).then(renderQueue);
+}
+function removeSong(i){
+  fetch('/ktv/remove?index='+i).then(function(r){ return r.json(); }).then(renderQueue);
+}
+function clearQueue(){
+  if(!confirm('确定清空已点列表？')) return;
+  fetch('/ktv/clear').then(function(r){ return r.json(); }).then(renderQueue);
+}
+function refreshQueue(){
+  fetch('/ktv/queue').then(function(r){ return r.json(); }).then(renderQueue);
+}
+
+/* 清空已播列表 */
+function clearPlayed(){
+  fetch('/ktv/clearPlayed')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      $('tip').textContent = '已清空已播列表';
+      renderQueue(d);
+    })
+    .catch(function(e){ $('tip').textContent = '清空失败：'+e; });
+}
+
+/* 切歌：跳过正在唱的（不计入已播），自动连播下一首；队列空则停止 */
+function skipSong(){
+  fetch('/ktv/skip')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      $('tip').textContent = (d.code===0 ? '⏭ ' : '⚠️ ') + (d.msg||'');
+      renderQueue(d);
+    })
+    .catch(function(e){ $('tip').textContent = '切歌失败：'+e; });
+}
+
+/* 切音轨：1=原唱（音轨1） 2=伴唱（音轨2），播放中随时可切；单音轨歌曲会提示不用切 */
+function switchTrack(t){
+  fetch('/ktv/track?t='+t)
+    .then(function(r){ return r.json(); })
+    .then(function(d){ $('tip').textContent = (d.code===0 ? '🎵 ' : '⚠️ ') + (d.msg||''); })
+    .catch(function(e){ $('tip').textContent = '切换失败：'+e; });
+}
+
+function renderQueue(d){
+  var list=d.list||[];
+  $('qcount').textContent='('+list.length+')';
+  if(!list.length){ $('queue').innerHTML='<div class="empty">还没有点歌，搜索后点「点歌」</div>'; }
+  else {
+    var h='';
+    for(var i=0;i<list.length;i++){
+      var s=list[i];
+      h+='<div class="song'+(s.current?' cur':'')+'"><img src="'+img(s.pic)+'" onerror="this.style.visibility=\'hidden\'">'
+        +'<div class="info"><div class="name">'+esc(s.name)+(s.current?'<span class="tag">正在唱</span>':'')+'</div><div class="artist">'+esc(s.artist||'')+'</div></div>'
+      +'<div class="act">'+(s.current?'':'<button class="btn btn-top" onclick="topSong('+s.index+')">顶</button>')
+      +'<button class="btn btn-del" onclick="removeSong('+s.index+')">删</button></div></div>';
+    }
+    $('queue').innerHTML=h;
+  }
+  renderPlayed(d.played||[]);
+}
+
+/* 已播列表：唱完的歌自动从已点移过来，点「再点」重新入队 */
+function renderPlayed(pl){
+  $('pcount').textContent='('+pl.length+')';
+  if(!pl.length){ $('played').innerHTML='<div class="empty">还没有唱完的歌</div>'; return; }
+  var h='';
+  for(var i=pl.length-1;i>=0;i--){
+    var s=pl[i];
+    h+='<div class="song"><img src="'+img(s.pic)+'" onerror="this.style.visibility=\'hidden\'">'
+      +'<div class="info"><div class="name"><span style="color:#3fb950">✔</span> '+esc(s.name)+'</div><div class="artist">'+esc(s.artist||'')+'</div></div>'
+      +'<div class="act"><button class="btn btn-play" onclick="addSong(this,'+quoteArgs(s)+')">再点</button></div></div>';
+  }
+  $('played').innerHTML=h;
+}
+
+$('wd').addEventListener('keydown', function(e){ if(e.key==='Enter') doSearch(); });
+refreshQueue();
+setInterval(refreshQueue, 5000);
+</script>
+</body>
+</html>

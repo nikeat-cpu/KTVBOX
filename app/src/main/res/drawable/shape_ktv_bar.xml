@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- KTV 主界面标题竖条：teal→霓虹青渐变 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/vs_2" />
+    <gradient
+        android:angle="0"
+        android:startColor="#26C6DA"
+        android:endColor="#B2EBF2"
+        android:type="linear" />
+</shape>
